@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: "Courier New", Courier, monospace;
+    /* font-family: Consolas, "Courier New", monospace; */
     background-color: #111111;
     color: #FFFFFF;
     padding: 20px;
