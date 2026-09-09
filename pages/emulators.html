@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emulators</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/mobile.css">
+    </head>
+
+    <body>
+        <h1>TRUNGTRG</h1>
+        <hr>
+
+        <input type="text" id="searchInput" placeholder="Search...">
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Last Modified</th>
+                        <th>Size</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody">
+                    <tr>
+                        <td><a href="/">../ (Parent Directory)</a></td>
+                        <td class="file-date">-</td>
+                        <td class="file-size">-</td>
+                        <td class="file-desc">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr style="margin-top: 30px;">
+        <p style="font-style: italic; font-size: 14px; color: #008000;">Developed by NTDDEV</p>
+
+        <script src="/assets/js/format-size.js"></script>
+        <script src="/assets/js/search.js"></script>
+        <script src="/assets/js/security.js"></script>
+    </body>
+</html>

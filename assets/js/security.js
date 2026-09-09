@@ -27,7 +27,6 @@
     // Chặn kéo thả hình ảnh
     document.addEventListener('dragstart', preventAction);
 
-    // Phát hiện và gây khó khăn cho việc mở DevTools
     const checkDevTools = function() {
         const threshold = 160;
         if (window.outerWidth - window.innerWidth > threshold || 
@@ -38,6 +37,6 @@
     };
 
     window.addEventListener('resize', checkDevTools);
-    checkDevTools(); // Chạy khi vừa load trang
+    checkDevTools();
 
 })();
