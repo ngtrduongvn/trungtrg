@@ -10,10 +10,13 @@
     </head>
 
     <body>
-        <h1>TRUNGTRG</h1>
-        <hr>
-
-        <input type="text" id="searchInput" placeholder="Search...">
+        <!-- Header & Search nằm trên cùng 1 hàng -->
+        <div class="header-bar">
+            <h1>TRUNGTRG<span>.</span></h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search files...">
+            </div>
+        </div>
 
         <div class="table-container">
             <table>
@@ -26,38 +29,32 @@
                     </tr>
                 </thead>
                 <tbody id="fileTableBody">
-                    <!-- <tr>
-                        <td><a href="#">../ (Parent Directory)</a></td>
-                        <td class="file-date">-</td>
-                        <td class="file-size" data-bytes="">-</td>
-                        <td class="file-desc">-</td>
-                    </tr> -->
                     <tr>
-                        <td><a href="pages/changelog.html">Changelog/</a></td>
+                        <td><a href="pages/changelog.html">📁 Changelog/</a></td>
                         <td class="file-date">2026-08-30 14:22</td>
                         <td class="file-size">-</td>
                         <td class="file-desc">Version history & release notes</td>
                     </tr>
                     <tr>
-                        <td><a href="pages/emulators.html">Emulators/</a></td>
+                        <td><a href="pages/emulators.html">📁 Emulators/</a></td>
                         <td class="file-date">2026-08-30 14:22</td>
                         <td class="file-size">-</td>
                         <td class="file-desc">Console & system emulators</td>
                     </tr>
                     <tr>
-                        <td><a href="pages/games.html">Games/</a></td>
+                        <td><a href="pages/games.html">📁 Games/</a></td>
                         <td class="file-date">2026-08-30 14:22</td>
                         <td class="file-size">-</td>
                         <td class="file-desc">Game files & playable ROMs</td>
                     </tr>
                     <tr>
-                        <td><a href="pages/tools.html">Tools/</a></td>
+                        <td><a href="pages/tools.html">📁 Tools/</a></td>
                         <td class="file-date">2026-08-30 14:22</td>
                         <td class="file-size">-</td>
                         <td class="file-desc">Utilities & helper software</td>
                     </tr>
                     <tr>
-                        <td><a href="documents/readme.html">README.md</a></td>
+                        <td><a href="documents/readme.html">📄 README.md</a></td>
                         <td class="file-date">2026-08-31 15:32</td>
                         <td class="file-size" data-bytes="717"></td>
                         <td class="file-desc">-</td>
@@ -65,12 +62,12 @@
                 </tbody>
             </table>
         </div>
-
-        <hr style="margin-top: 30px;">
-        <p style="font-style: italic; font-size: 14px; color: #008000;">Developed by NTDDEV</p>
+        
+        <footer>Developed by NTDDEV</footer>
 
         <script src="assets/js/format-size.js"></script>
         <script src="assets/js/search.js"></script>
         <script src="assets/js/security.js"></script>
+        <script src="assets/js/page-transition.js"></script>
     </body>
 </html>

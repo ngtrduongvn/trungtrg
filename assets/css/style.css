@@ -1,40 +1,100 @@
-html {
+* {
     user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    font-family: Consolas, "Courier New", monospace;
-    background-color: #111111;
-    color: #FFFFFF;
-    padding: 20px;
-    margin: 0;
+    font-family: 'JetBrains Mono', Consolas, 'Fira Code', monospace;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    padding: 30px 40px 90px 40px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.25s ease-in-out;
+}
+body.fade-in {
+    opacity: 1;
 }
 
-input {
-    background-color: #000;
-    color: #888;
-    border: 1px solid #AAAAAA;
-    border-radius: 2px;
-    width: 250px; padding: 5px; margin-bottom: 15px;
-    outline: none;
+body.fade-out {
+    opacity: 0;
+}
+
+/* --- HEADER --- */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #1a1a1a;
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: normal;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
-hr {
-    border: 0;
-    border-bottom: 1px solid #555555;
-    margin-bottom: 20px;
+h1 span {
+    color: #00ff66;
 }
 
-/* Khung chứa bảng để cuộn ngang mượt mà trên di động */
+/* --- SEARCH BAR --- */
+.search-box {
+    position: relative;
+}
+
+#fileTableBody tr {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#fileTableBody tr.is-hidden {
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+}
+
+#fileTableBody tr.is-removed {
+    display: none !important;
+}
+
+input[type="text"] {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    width: 280px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+    color: #555555;
+}
+
+input[type="text"]:focus {
+    border-color: #00ff66; /* Đổi màu viền khi focus */
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.15);
+}
+
+/* --- TABLE --- */
 .table-container {
     width: 100%;
     overflow-x: auto;
+    flex: 1;
 }
 
 table {
@@ -44,27 +104,56 @@ table {
     white-space: nowrap;
 }
 
-th, td {
-    padding: 6px 40px 6px 0;
-    font-weight: normal;
+th {
+    color: #bbbbbb;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #333333;
+    font-weight: 600;
 }
 
-th {
-    color: #CFCFCF;
-    border-bottom: 1px dashed #444444;
-    padding-bottom: 8px;
+td {
+    padding: 14px 20px 14px 10px;
+    border: 1px dashed #181818;
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+    background-color: #121212;
 }
 
 a {
-    color: #0096FF;
+    color: #38bdf8;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
 }
 
 a:hover {
-    /* text-decoration: underline; */
-    color: #87CEEB;
+    color: #00ff66;
 }
 
 .file-date, .file-size, .file-desc {
-    color: #868686;
+    color: #71717a;
+    font-size: 13px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 40px;
+    background-color: #080808;
+    border-top: 1px solid #1a1a1a;
+    color: #00ff66;
+    font-style: italic;
+    font-size: 13px;
+    z-index: 100;
 }

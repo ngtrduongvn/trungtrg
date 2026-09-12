@@ -10,10 +10,12 @@
     </head>
 
     <body>
-        <h1>TRUNGTRG</h1>
-        <hr>
-
-        <input type="text" id="searchInput" placeholder="Search...">
+        <div class="header-bar">
+            <h1>TRUNGTRG<span>.</span></h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search files...">
+            </div>
+        </div>
 
         <div class="table-container">
             <table>
@@ -27,7 +29,7 @@
                 </thead>
                 <tbody id="fileTableBody">
                     <tr>
-                        <td><a href="/">../ (Parent Directory)</a></td>
+                        <td><a href="/">↩️ ../ (Parent Directory)</a></td>
                         <td class="file-date">-</td>
                         <td class="file-size">-</td>
                         <td class="file-desc">-</td>
@@ -36,11 +38,11 @@
             </table>
         </div>
 
-        <hr style="margin-top: 30px;">
-        <p style="font-style: italic; font-size: 14px; color: #008000;">Developed by NTDDEV</p>
+        <footer>Developed by NTDDEV</footer>
 
         <script src="/assets/js/format-size.js"></script>
         <script src="/assets/js/search.js"></script>
         <script src="/assets/js/security.js"></script>
+        <script src="/assets/js/page-transition.js"></script>
     </body>
 </html>
