@@ -16,14 +16,6 @@ body {
     padding: 30px 40px 90px 40px;
     display: flex;
     flex-direction: column;
-    transition: opacity 0.25s ease-in-out;
-}
-body.fade-in {
-    opacity: 1;
-}
-
-body.fade-out {
-    opacity: 0;
 }
 
 /* --- HEADER --- */
@@ -45,27 +37,12 @@ h1 {
 
 h1 span {
     color: #00ff66;
+    font-size: 18px;
 }
 
 /* --- SEARCH BAR --- */
 .search-box {
     position: relative;
-}
-
-#fileTableBody tr {
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#fileTableBody tr.is-hidden {
-    opacity: 0;
-    transform: translateY(-4px);
-    pointer-events: none;
-}
-
-#fileTableBody tr.is-removed {
-    display: none !important;
 }
 
 input[type="text"] {
@@ -78,7 +55,6 @@ input[type="text"] {
     font-family: inherit;
     font-size: 13px;
     outline: none;
-    transition: all 0.2s ease-in-out;
 }
 
 input[type="text"]::placeholder {
@@ -86,7 +62,7 @@ input[type="text"]::placeholder {
 }
 
 input[type="text"]:focus {
-    border-color: #00ff66; /* Đổi màu viền khi focus */
+    border-color: #00ff66;
     box-shadow: 0 0 8px rgba(0, 255, 102, 0.15);
 }
 
@@ -120,10 +96,6 @@ td {
     font-size: 14px;
 }
 
-tbody tr {
-    transition: background-color 0.15s ease;
-}
-
 tbody tr:hover {
     background-color: #121212;
 }
@@ -132,7 +104,6 @@ a {
     color: #38bdf8;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.15s ease;
 }
 
 a:hover {
@@ -151,7 +122,7 @@ footer {
     width: 100%;
     padding: 14px 40px;
     background-color: #080808;
-    border-top: 1px solid #1a1a1a;
+    border-top: 2px solid #202020;
     color: #00ff66;
     font-style: italic;
     font-size: 13px;
