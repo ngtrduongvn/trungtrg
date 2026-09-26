@@ -128,3 +128,38 @@ footer {
     font-size: 13px;
     z-index: 100;
 }
+
+
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 15px 0;
+    padding: 8px 12px;
+    background-color: #121212;
+    border: 1px solid #222;
+    border-radius: 4px;
+    font-family: monospace, sans-serif;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #D100D1;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .crumb-separator {
+    color: #555;
+    user-select: none;
+}
+
+.breadcrumb .crumb-current {
+    color: #cccccc;
+    font-weight: bold;
+}
