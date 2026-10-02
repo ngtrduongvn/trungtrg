@@ -59,11 +59,19 @@
                 </tbody>
             </table>
         </div>
+
+        <!-- Cloudflare Turnstile -->
+        <form action="/api/submit" method="POST">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFLrjPWVHmVafdFG"></div>
+        
+            <button type="submit">Submit</button>
+        </form>
         
         <footer>Developed by NTDDEV - v2.1.4</footer>
 
         <script src="assets/js/format-size.js"></script>
         <script src="assets/js/search.js"></script>
         <script src="assets/js/security.js"></script>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     </body>
 </html>
