@@ -107,7 +107,7 @@ a {
 }
 
 a:hover {
-    color: #00ff66;
+    text-decoration: underline;
 }
 
 .file-date, .file-size, .file-desc {
@@ -128,7 +128,6 @@ footer {
     font-size: 13px;
     z-index: 100;
 }
-
 
 
 
@@ -163,4 +162,17 @@ footer {
 .breadcrumb .crumb-current {
     color: #cccccc;
     font-weight: bold;
+}
+
+
+
+/* Social links */
+.social-links .discord {
+    color: #5865F2;
+}
+.social-links .youtube {
+    color: #FF0033;
+}
+.social-links .donate {
+    color: #02A95C;
 }
